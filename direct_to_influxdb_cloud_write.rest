@@ -1,0 +1,121 @@
+#
+# curl --location \
+# --request POST 'https://eastus-1.azure.cloud2.influxdata.com/api/v2/write?bucket=dfl_MICROGRID_seriesEntry&precision=ms' \
+# --header 'Authorization: Token 1CsKtl3oJXKdFz-_3Cp8x-ku0jSqwPaztF_qLo2sxW5LjV870hjqs92SpYvwYzVIpmj0oS9BbUMUPN0ocCsx0Q==' \
+# --header 'Accept: application/csv' \
+# --header 'Content-type: application/vnd.flux' \
+# --data-raw 'storage2,series_id=7fb48f35-4641-d24e-b530-63cde99306ad data=0.4110402101661734,attr_Quality_semanticref="",attr_Quality="1" 1609461503000
+# storage2,series_id=7fb48f35-4641-d24e-b530-63cde99306ad data=1.7220018264541819,attr_Quality_semanticref="",attr_Quality="0" 1609465103000
+# storage2,series_id=7fb48f35-4641-d24e-b530-63cde99306ad data=1.3714351553123967,attr_Quality_semanticref="",attr_Quality="1" 1609468703000
+# storage2,series_id=7fb48f35-4641-d24e-b530-63cde99306ad data=1.6781075819827485,attr_Quality_semanticref="",attr_Quality="0" 1609472303000
+# storage2,series_id=7fb48f35-4641-d24e-b530-63cde99306ad data=1.9362509805343386,attr_Quality_semanticref="",attr_Quality="0" 1609475903000'
+#
+@influxdb_cloud_endpoint_qa=https://eastus-1.azure.cloud2.influxdata.com
+@influxdb_cloud_token_qa=1CsKtl3oJXKdFz-_3Cp8x-ku0jSqwPaztF_qLo2sxW5LjV870hjqs92SpYvwYzVIpmj0oS9BbUMUPN0ocCsx0Q==
+@influxdb_cloud_bucket_qa=dfl_MICROGRID_seriesEntry
+
+POST {{influxdb_cloud_endpoint_qa}}/api/v2/write?bucket={{influxdb_cloud_bucket_qa}}&precision=ms
+Authorization: Token {{influxdb_cloud_token_qa}}
+Accept: application/csv
+Content-type: application/vnd.flux
+
+raw,provider=emas,object=site,siteId=intencityExternal acquisitionDate="2022-08-01T00:00:11.000+00:00",receptionDate="2022-08-01T00:00:14.634+00:00",lastAcquisitionDate="2022-08-31T00:00:01Z" 1659312011000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:19.000+00:00",receptionDate="2022-08-01T00:00:21.054+00:00",executionStatus=99.0 1659312019000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:19.000+00:00",receptionDate="2022-08-01T00:00:21.758+00:00",accessStatus=5.0 1659312019000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:20.000+00:00",receptionDate="2022-08-01T00:00:22.047+00:00" 1659312020000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:20.000+00:00",receptionDate="2022-08-01T00:00:22.250+00:00",executionStatus=101.0 1659312020000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:20.000+00:00",receptionDate="2022-08-01T00:00:22.451+00:00" 1659312020000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:20.000+00:00",receptionDate="2022-08-01T00:00:22.496+00:00",executionStatus=99.0 1659312020000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:11.087+00:00",receptionDate="2022-08-01T00:00:23.410+00:00" 1659312011087
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:11.087+00:00",receptionDate="2022-08-01T00:00:24.126+00:00",electricalPower=-0.3843594789505005 1659312011087
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:11.087+00:00",receptionDate="2022-08-01T00:00:25.150+00:00",electricalEnergy=356382.00000000006 1659312011087
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:11.087+00:00",receptionDate="2022-08-01T00:00:27.403+00:00",electricalEnergy=3601791.5 1659312011087
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:11.087+00:00",receptionDate="2022-08-01T00:00:27.495+00:00",electricalOppositeEnergy=1062855.0625 1659312011087
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:11.087+00:00",receptionDate="2022-08-01T00:00:27.655+00:00",electricalPower=196.973453125 1659312011087
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:32.000+00:00",receptionDate="2022-08-01T00:00:35.083+00:00",accessStatus=2.0 1659312032000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:32.000+00:00",receptionDate="2022-08-01T00:00:35.289+00:00",executionStatus=99.0 1659312032000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:34.000+00:00",receptionDate="2022-08-01T00:00:36.162+00:00",executionStatus=99.0 1659312034000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:34.000+00:00",receptionDate="2022-08-01T00:00:36.468+00:00" 1659312034000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:34.000+00:00",receptionDate="2022-08-01T00:00:36.619+00:00",executionStatus=101.0 1659312034000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:34.000+00:00",receptionDate="2022-08-01T00:00:36.698+00:00" 1659312034000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:31.606+00:00",receptionDate="2022-08-01T00:00:42.356+00:00",electricalEnergy=75209.067 1659312031606
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:31.606+00:00",receptionDate="2022-08-01T00:00:43.002+00:00",electricalPower=-0.3821790814399719 1659312031606
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:31.606+00:00",receptionDate="2022-08-01T00:00:47.548+00:00",electricalEnergy=3601792.5 1659312031606
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:31.606+00:00",receptionDate="2022-08-01T00:00:47.734+00:00",electricalOppositeEnergy=1062855.0625 1659312031606
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:31.606+00:00",receptionDate="2022-08-01T00:00:47.891+00:00" 1659312031606
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:31.606+00:00",receptionDate="2022-08-01T00:00:48.500+00:00",electricalPower=196.41716015625 1659312031606
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:31.606+00:00",receptionDate="2022-08-01T00:00:49.214+00:00",electricalEnergy=356382.00000000006 1659312031606
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:45.000+00:00",receptionDate="2022-08-01T00:00:49.931+00:00",executionStatus=99.0 1659312045000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:45.000+00:00",receptionDate="2022-08-01T00:00:50.340+00:00",accessStatus=5.0 1659312045000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:52.234+00:00",receptionDate="2022-08-01T00:01:03.652+00:00",electricalEnergy=75209.067 1659312052234
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:00:52.234+00:00",receptionDate="2022-08-01T00:01:08.466+00:00",electricalPower=-0.39859259128570557 1659312052234
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:01.000+00:00",receptionDate="2022-08-01T00:01:08.466+00:00",executionStatus=99.0 1659312061000
+raw,provider=emas,object=site,siteId=intencityExternal acquisitionDate="2022-08-01T00:01:08.000+00:00",receptionDate="2022-08-01T00:01:08.466+00:00",lastAcquisitionDate="2022-08-31T00:01:00Z" 1659312068000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:52.234+00:00",receptionDate="2022-08-01T00:01:10.859+00:00" 1659312052234
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:02.000+00:00",receptionDate="2022-08-01T00:01:11.230+00:00" 1659312062000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:52.234+00:00",receptionDate="2022-08-01T00:01:12.254+00:00",electricalPower=196.79049609375 1659312052234
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:52.234+00:00",receptionDate="2022-08-01T00:01:12.869+00:00",electricalEnergy=3601793.625 1659312052234
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:00:52.234+00:00",receptionDate="2022-08-01T00:01:13.483+00:00",electricalOppositeEnergy=1062855.0625 1659312052234
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:01.000+00:00",receptionDate="2022-08-01T00:01:14.988+00:00",accessStatus=5.0 1659312061000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:00:52.234+00:00",receptionDate="2022-08-01T00:01:15.868+00:00",electricalEnergy=356382.00000000006 1659312052234
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:20.000+00:00",receptionDate="2022-08-01T00:01:22.446+00:00",accessStatus=5.0 1659312080000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:20.000+00:00",receptionDate="2022-08-01T00:01:22.493+00:00",executionStatus=99.0 1659312080000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:12.933+00:00",receptionDate="2022-08-01T00:01:24.010+00:00",electricalEnergy=75209.067 1659312072933
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:12.933+00:00",receptionDate="2022-08-01T00:01:24.539+00:00",electricalPower=-0.38528162240982056 1659312072933
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:12.933+00:00",receptionDate="2022-08-01T00:01:26.444+00:00",electricalEnergy=3601794.875 1659312072933
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:12.933+00:00",receptionDate="2022-08-01T00:01:26.796+00:00" 1659312072933
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:12.933+00:00",receptionDate="2022-08-01T00:01:27.819+00:00",electricalPower=196.24142187500001 1659312072933
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:12.933+00:00",receptionDate="2022-08-01T00:01:29.161+00:00",electricalOppositeEnergy=1062855.0625 1659312072933
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:12.933+00:00",receptionDate="2022-08-01T00:01:29.856+00:00",electricalEnergy=356382.00000000006 1659312072933
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:33.000+00:00",receptionDate="2022-08-01T00:01:36.017+00:00",executionStatus=99.0 1659312093000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:33.000+00:00",receptionDate="2022-08-01T00:01:36.102+00:00",accessStatus=5.0 1659312093000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:35.000+00:00",receptionDate="2022-08-01T00:01:37.389+00:00" 1659312095000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:35.000+00:00",receptionDate="2022-08-01T00:01:37.458+00:00",executionStatus=101.0 1659312095000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:35.000+00:00",receptionDate="2022-08-01T00:01:37.660+00:00" 1659312095000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:35.000+00:00",receptionDate="2022-08-01T00:01:38.045+00:00",executionStatus=99.0 1659312095000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:33.762+00:00",receptionDate="2022-08-01T00:01:44.716+00:00",electricalEnergy=75209.067 1659312093762
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:33.762+00:00",receptionDate="2022-08-01T00:01:44.971+00:00",electricalPower=-0.3852750062942505 1659312093762
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:33.762+00:00",receptionDate="2022-08-01T00:01:48.301+00:00",electricalEnergy=3601796.0 1659312093762
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:33.762+00:00",receptionDate="2022-08-01T00:01:48.301+00:00" 1659312093762
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:33.762+00:00",receptionDate="2022-08-01T00:01:48.554+00:00",electricalOppositeEnergy=1062855.0625 1659312093762
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:33.762+00:00",receptionDate="2022-08-01T00:01:48.983+00:00",electricalPower=197.92045703125 1659312093762
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:33.762+00:00",receptionDate="2022-08-01T00:01:49.653+00:00",electricalEnergy=356382.00000000006 1659312093762
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:48.000+00:00",receptionDate="2022-08-01T00:01:50.758+00:00" 1659312108000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:46.000+00:00",receptionDate="2022-08-01T00:01:50.962+00:00",executionStatus=99.0 1659312106000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:48.000+00:00",receptionDate="2022-08-01T00:01:51.218+00:00" 1659312108000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:01:46.000+00:00",receptionDate="2022-08-01T00:01:51.577+00:00",accessStatus=5.0 1659312106000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:02.000+00:00",receptionDate="2022-08-01T00:02:04.250+00:00",accessStatus=5.0 1659312122000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:02.000+00:00",receptionDate="2022-08-01T00:02:04.378+00:00",executionStatus=99.0 1659312122000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:54.279+00:00",receptionDate="2022-08-01T00:02:06.349+00:00" 1659312114279
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:01:54.279+00:00",receptionDate="2022-08-01T00:02:06.628+00:00",electricalEnergy=356382.00000000006 1659312114279
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:54.279+00:00",receptionDate="2022-08-01T00:02:06.940+00:00",electricalEnergy=3601797.0 1659312114279
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:54.279+00:00",receptionDate="2022-08-01T00:02:07.146+00:00",electricalPower=198.33046875 1659312114279
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:01:54.279+00:00",receptionDate="2022-08-01T00:02:08.489+00:00",electricalOppositeEnergy=1062855.0625 1659312114279
+raw,provider=emas,object=site,siteId=intencityExternal acquisitionDate="2022-08-01T00:02:08.000+00:00",receptionDate="2022-08-01T00:02:08.679+00:00",lastAcquisitionDate="2022-08-31T00:02:04Z" 1659312128000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:19.000+00:00",receptionDate="2022-08-01T00:02:21.273+00:00",executionStatus=99.0 1659312139000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:19.000+00:00",receptionDate="2022-08-01T00:02:21.478+00:00",accessStatus=2.0 1659312139000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:20.000+00:00",receptionDate="2022-08-01T00:02:22.251+00:00" 1659312140000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:20.000+00:00",receptionDate="2022-08-01T00:02:22.505+00:00",executionStatus=101.0 1659312140000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:14.999+00:00",receptionDate="2022-08-01T00:02:25.599+00:00",electricalEnergy=75209.067 1659312134999
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:14.999+00:00",receptionDate="2022-08-01T00:02:27.094+00:00",electricalPower=-0.39482250809669495 1659312134999
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:02:14.999+00:00",receptionDate="2022-08-01T00:02:27.519+00:00" 1659312134999
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:14.999+00:00",receptionDate="2022-08-01T00:02:28.032+00:00",electricalPower=196.50255078125002 1659312134999
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:14.999+00:00",receptionDate="2022-08-01T00:02:29.262+00:00",electricalEnergy=3601798.0 1659312134999
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:14.999+00:00",receptionDate="2022-08-01T00:02:30.694+00:00",electricalOppositeEnergy=1062855.0625 1659312134999
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:02:14.999+00:00",receptionDate="2022-08-01T00:02:30.899+00:00",electricalEnergy=356382.00000000006 1659312134999
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:34.000+00:00",receptionDate="2022-08-01T00:02:36.585+00:00",accessStatus=5.0 1659312154000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:34.000+00:00",receptionDate="2022-08-01T00:02:36.737+00:00",executionStatus=99.0 1659312154000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:36.000+00:00",receptionDate="2022-08-01T00:02:37.556+00:00" 1659312156000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:36.000+00:00",receptionDate="2022-08-01T00:02:37.765+00:00",executionStatus=101.0 1659312156000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:02:36.000+00:00",receptionDate="2022-08-01T00:02:37.791+00:00" 1659312156000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:02:36.000+00:00",receptionDate="2022-08-01T00:02:38.374+00:00",executionStatus=99.0 1659312156000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:35.690+00:00",receptionDate="2022-08-01T00:02:46.509+00:00",electricalEnergy=75209.067 1659312155690
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:02:35.690+00:00",receptionDate="2022-08-01T00:02:50.560+00:00" 1659312155690
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:35.690+00:00",receptionDate="2022-08-01T00:02:50.970+00:00",electricalEnergy=3601799.375 1659312155690
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:35.690+00:00",receptionDate="2022-08-01T00:02:50.970+00:00",electricalPower=201.61577734375 1659312155690
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:35.690+00:00",receptionDate="2022-08-01T00:02:51.745+00:00",electricalOppositeEnergy=1062855.0625 1659312155690
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=pva_External acquisitionDate="2022-08-01T00:02:35.690+00:00",receptionDate="2022-08-01T00:02:51.878+00:00",electricalEnergy=356382.00000000006 1659312155690
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:35.690+00:00",receptionDate="2022-08-01T00:02:53.254+00:00",electricalPower=-0.38115549087524414 1659312155690
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:49.000+00:00",receptionDate="2022-08-01T00:02:53.985+00:00",executionStatus=99.0 1659312169000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=utility_External acquisitionDate="2022-08-01T00:02:50.000+00:00",receptionDate="2022-08-01T00:02:54.348+00:00" 1659312170000
+raw,provider=emac,object=resource,siteId=intencityExternal,resourceId=battery_external acquisitionDate="2022-08-01T00:02:49.000+00:00",receptionDate="2022-08-01T00:02:54.349+00:00",accessStatus=5.0 1659312169000

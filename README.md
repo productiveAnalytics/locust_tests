@@ -19,6 +19,7 @@ Refer: https://github.com/productiveAnalytics/flask-py-sandbox/tree/feature/anot
 
 ## Start locust
 ```python3 -m locust --host http://localhost:5000 --locustfile locustfile.py```
+```python3 -m locust --host https://eastus-1.azure.cloud2.influxdata.com --locustfile influxdb_locustfiles/locust_query_simple.py```
 
 Visit locust UI at http://localhost:8089
 

@@ -1,0 +1,21 @@
+#
+# curl --location \
+# --request POST 'https://eastus-1.azure.cloud2.influxdata.com/api/v2/query' \
+# --header 'Authorization: Token 1CsKtl3oJXKdFz-_3Cp8x-ku0jSqwPaztF_qLo2sxW5LjV870hjqs92SpYvwYzVIpmj0oS9BbUMUPN0ocCsx0Q==' \
+# --header 'Accept: application/csv' \
+# --header 'Content-type: application/vnd.flux' \
+# --data-raw 'from(bucket: "dfl_MICROGRID_seriesEntry") 
+#  |> range(start: -100d)
+#  |> count()'
+#
+@influxdb_cloud_endpoint_qa=https://eastus-1.azure.cloud2.influxdata.com
+@influxdb_cloud_token_qa=1CsKtl3oJXKdFz-_3Cp8x-ku0jSqwPaztF_qLo2sxW5LjV870hjqs92SpYvwYzVIpmj0oS9BbUMUPN0ocCsx0Q==
+
+POST {{influxdb_cloud_endpoint_qa}}/api/v2/query
+Authorization: Token {{influxdb_cloud_token_qa}}
+Accept: application/csv
+Content-type: application/vnd.flux
+
+from(bucket: "dfl_MICROGRID_seriesEntry") 
+|> range(start: -100d)
+|> count()
