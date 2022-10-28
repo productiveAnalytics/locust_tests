@@ -1,0 +1,2 @@
+RETRY_TIME_IN_SECONDS:int=2
+INFLUXDB_TOKEN:str="-rGQgvdkqZSg4uGhKD0zfemQB-rOz5Y0VvYTfl-v7uQ-CuCrXKfdY7BRXua5fnnDhqbNwAlj6_XCPPUl_dQ52w=="
